@@ -142,7 +142,7 @@ class ChatRowItem: TableRowItem {
     var rightInset:CGFloat {
         return chatInteraction.presentation.selectionState != nil ? 42.0 : 20.0
     }
-    let leftInset:CGFloat = 20
+    let leftInset:CGFloat = 0
 
     
     var _defaultHeight:CGFloat {
@@ -245,7 +245,7 @@ class ChatRowItem: TableRowItem {
     }
     
     var defLeftInset:CGFloat {
-        return leftInset + 36 + 10
+        return leftInset + 20
     }
     
     var contentOffset:NSPoint {

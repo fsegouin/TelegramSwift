@@ -150,7 +150,7 @@ class AppearanceViewController: TableViewController {
         super.viewDidLoad()
         let account = self.account
         let arguments = AppearanceViewArguments(account: account, toggleDarkMode: { enable in
-            _ = updateThemeSettings(postbox: account.postbox, pallete: enable ? darkPallete : whitePallete, dark: enable).start()
+            _ = updateThemeSettings(postbox: account.postbox, pallete: enable ? darkPallete : solarizedLightPalette, dark: enable).start()
         }, toggleFontSize: { size in
             _ = updateBaseAppSettingsInteractively(postbox: account.postbox, { settings -> BaseApplicationSettings in
                 return settings.withUpdatedFontSize(size)

@@ -18,7 +18,7 @@ class ChatListRowView: TableRowView {
     private var messageText:TextNode
     private var badgeView:View?
     private var activitiesModel:ChatActivitiesModel?
-    private var photo:AvatarControl = AvatarControl(font: .avatar(.custom(22)))
+//    private var photo:AvatarControl = AvatarControl(font: .avatar(.custom(22)))
     private var activeDragging:Bool = false
     private var hiddemMessage:Bool = false
     private let peerInputActivitiesDisposable:MetaDisposable = MetaDisposable()
@@ -211,9 +211,9 @@ class ChatListRowView: TableRowView {
         titleText = TextNode();
         messageText = TextNode();
         super.init(frame: frameRect)
-        photo.userInteractionEnabled = false
-        photo.frame = NSMakeRect(10, 8, 50, 50)
-        addSubview(photo)
+//        photo.userInteractionEnabled = false
+//        photo.frame = NSMakeRect(10, 8, 50, 50)
+//        addSubview(photo)
         self.registerForDraggedTypes([.tiff, .string, .kUrl, .kFilenames])
   
     }
@@ -271,9 +271,9 @@ class ChatListRowView: TableRowView {
                 
          if let item = self.item as? ChatListRowItem {
             
-            if let peer = item.peer {
-                photo.setPeer(account: item.account, peer: peer)
-            }
+//            if let peer = item.peer {
+//                photo.setPeer(account: item.account, peer: peer)
+//            }
             
             if let badgeNode = item.ctxBadgeNode {
                 if badgeView == nil {

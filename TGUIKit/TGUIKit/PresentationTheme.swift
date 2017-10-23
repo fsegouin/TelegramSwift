@@ -131,6 +131,8 @@ public let whitePallete = ColorPallete(background: .white, text: NSColor(0x00000
 //282b35
 public let darkPallete = ColorPallete(background: NSColor(0x292b36), text: NSColor(0xe9e9e9), grayText: NSColor(0x8699a3), link: NSColor(0x04afc8), blueUI: NSColor(0x04afc8), redUI: NSColor(0xec6657), greenUI:NSColor(0x49ad51), blackTransparent: NSColor(0x000000, 0.6), grayTransparent: NSColor(0x2f313d, 0.5), grayUI: NSColor(0x292b36), darkGrayText:NSColor(0x8699a3), blueText:NSColor(0x04afc8), blueSelect:NSColor(0x20889a), selectText: NSColor(0x8699a3), blueFill: NSColor(0x04afc8), border: NSColor(0x464a57), grayBackground:NSColor(0x464a57), grayForeground:NSColor(0x3d414d), grayIcon: NSColor(0x8699a3), blueIcon: NSColor(0x04afc8), badgeMuted:NSColor(0x8699a3), badge:NSColor(0x04afc8), indicatorColor: .white, selectMessage: NSColor(0x3d414d))
 
+public let solarizedLightPalette = ColorPallete(background: NSColor(0xfdf6e3), text: NSColor(0x657b83), grayText: NSColor(0x93a1a1), link: NSColor(0xd33682), blueUI: NSColor(0x268bd2), redUI: NSColor(0xdc322f), greenUI:NSColor(0xb58900), blackTransparent: NSColor(0x000000, 0.6), grayTransparent: NSColor(0xf4f4f4, 0.4), grayUI: NSColor(0xFaFaFa), darkGrayText:NSColor(0x333333), blueText:NSColor(0x2481CC), blueSelect:NSColor(0x4c91c7), selectText:NSColor(0xeaeaea), blueFill:NSColor(0x4ba3e2), border:NSColor(0xeee8d5), grayBackground:NSColor(0xeee8d5), grayForeground:NSColor(0x93a1a1), grayIcon:NSColor(0x9e9e9e), blueIcon:NSColor(0x0f8fe4), badgeMuted:NSColor(0xd7d7d7), badge:NSColor(0x4ba3e2), indicatorColor: NSColor(0x464a57), selectMessage: NSColor(0xE3EDF4))
+
 /*
  public let darkPallete = ColorPallete(background: NSColor(0x282e33), text: NSColor(0xe9e9e9), grayText: NSColor(0x999999), link: NSColor(0x20eeda), blueUI: NSColor(0x20eeda), redUI: NSColor(0xec6657), greenUI:NSColor(0x63DA6E), blackTransparent: NSColor(0x000000, 0.6), grayTransparent: NSColor(0xf4f4f4, 0.4), grayUI: NSColor(0xFaFaFa), darkGrayText:NSColor(0x333333), blueText:NSColor(0x009687), blueSelect:NSColor(0x009687), selectText:NSColor(0xeaeaea), blueFill: NSColor(0x20eeda), border: NSColor(0x3d444b), grayBackground:NSColor(0x3d444b), grayForeground:NSColor(0xe4e4e4), grayIcon:NSColor(0x757676), blueIcon: NSColor(0x20eeda), badgeMuted:NSColor(0xd7d7d7), badge:NSColor(0x4ba3e2), indicatorColor: .white)
  */
@@ -138,7 +140,7 @@ public let darkPallete = ColorPallete(background: NSColor(0x292b36), text: NSCol
 
 private var _theme:Atomic<PresentationTheme> = Atomic(value: whiteTheme)
 
-public let whiteTheme = PresentationTheme(colors: whitePallete, search: SearchTheme(.grayBackground, #imageLiteral(resourceName: "Icon_SearchField").precomposed(), #imageLiteral(resourceName: "Icon_SearchClear").precomposed(), localizedString("SearchField.Search"), .text, .grayText))
+public let whiteTheme = PresentationTheme(colors: solarizedLightPalette, search: SearchTheme(.grayBackground, #imageLiteral(resourceName: "Icon_SearchField").precomposed(), #imageLiteral(resourceName: "Icon_SearchClear").precomposed(), localizedString("SearchField.Search"), .text, .grayText))
 
 
 

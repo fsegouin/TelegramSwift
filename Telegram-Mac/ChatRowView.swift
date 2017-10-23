@@ -327,7 +327,7 @@ class ChatRowView: TableRowView, Notifable, MultipleSelectable {
             if let reply = item.replyModel {
                 reply.frame = NSMakeRect(contentFrame.minX, item.replyOffset, reply.size.width,reply.size.height)
             }
-            avatar?.frame = NSMakeRect(item.leftInset, item.defaultContentTopOffset, 36, 36)
+//            avatar?.frame = NSMakeRect(item.leftInset, item.defaultContentTopOffset, 36, 36)
             
             var additionInset:CGFloat = contentView.frame.maxY + item.defaultContentTopOffset
             if let captionLayout = item.captionLayout {
@@ -367,34 +367,34 @@ class ChatRowView: TableRowView, Notifable, MultipleSelectable {
         }
     }
     
-    func fillPhoto(_ item:ChatRowItem) -> Void {
-        if case .Full = item.itemType, item.peer != nil {
-            
-            if avatar == nil {
-                avatar = AvatarControl(font: .avatar(.text))
-                avatar?.setFrameSize(36,36)
-               super.addSubview(avatar!)
-            }
-            avatar?.removeAllHandlers()
-            avatar?.set(handler: { control in
-                if let peerId = item.peer?.id {
-                    item.chatInteraction.openInfo(peerId, false, nil, nil)
-                }
-            }, for: .Click)
-            
-            avatar?.set(handler: { control in
-                if let peerId = item.peer?.id {
-                    showDetailInfoPopover(forPeerId: peerId, account: item.account, fromView: control)
-                }
-            }, for: .LongOver)
-            
-            self.avatar?.setPeer(account: item.account, peer: item.peer!)
-            
-        } else {
-            avatar?.removeFromSuperview()
-            avatar = nil
-        }
-    }
+//    func fillPhoto(_ item:ChatRowItem) -> Void {
+//        if case .Full = item.itemType, item.peer != nil {
+//
+//            if avatar == nil {
+//                avatar = AvatarControl(font: .avatar(.text))
+//                avatar?.setFrameSize(36,36)
+//               super.addSubview(avatar!)
+//            }
+//            avatar?.removeAllHandlers()
+//            avatar?.set(handler: { control in
+//                if let peerId = item.peer?.id {
+//                    item.chatInteraction.openInfo(peerId, false, nil, nil)
+//                }
+//            }, for: .Click)
+//
+//            avatar?.set(handler: { control in
+//                if let peerId = item.peer?.id {
+//                    showDetailInfoPopover(forPeerId: peerId, account: item.account, fromView: control)
+//                }
+//            }, for: .LongOver)
+//
+//            self.avatar?.setPeer(account: item.account, peer: item.peer!)
+//
+//        } else {
+//            avatar?.removeFromSuperview()
+//            avatar = nil
+//        }
+//    }
     
     func fillCaption(_ item:ChatRowItem) -> Void {
         if let layout = item.captionLayout {
@@ -512,7 +512,7 @@ class ChatRowView: TableRowView, Notifable, MultipleSelectable {
             fillName(item)
             fillReplyIfNeeded(item.replyModel, item)
             fillForward(item)
-            fillPhoto(item)
+//            fillPhoto(item)
             fillCaption(item)
             fillReplyMarkup(item)
             fillShareControl(item)

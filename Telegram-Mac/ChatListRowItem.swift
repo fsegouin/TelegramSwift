@@ -208,7 +208,7 @@ class ChatListRowItem: TableRowItem {
         return (max(300, size.width) - 50 - margin * 4) - (pinnedType != .none ? 20 : 0) - (mentionsCount != nil ? 24 : 0)
     }
     
-    let leftInset:CGFloat = 50 + (10 * 2.0);
+    let leftInset:CGFloat = 0 + (10 * 2.0);
     
     override func makeSize(_ width: CGFloat, oldWidth:CGFloat) -> Bool {
         if self.oldWidth == 0 || self.oldWidth != width {

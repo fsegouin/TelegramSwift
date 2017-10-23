@@ -130,7 +130,7 @@ struct ThemePalleteSettings: PreferencesEntry, Equatable {
     
     
     static var defaultTheme: ThemePalleteSettings {
-        return ThemePalleteSettings(whitePallete, dark: false, fontSize: 13.0)
+        return ThemePalleteSettings(solarizedLightPalette, dark: false, fontSize: 13.0)
     }
 }
 

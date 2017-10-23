@@ -105,7 +105,7 @@ class MainViewController: TelegramViewController {
         
         items.append(SPopoverItem(theme.dark ? tr(.fastSettingsDisableDarkMode) : tr(.fastSettingsEnableDarkMode), { [weak self] in
             if let strongSelf = self {
-                _ = updateThemeSettings(postbox: strongSelf.account.postbox, pallete: !theme.dark ? darkPallete : whitePallete, dark: !theme.dark).start()
+                _ = updateThemeSettings(postbox: strongSelf.account.postbox, pallete: !theme.dark ? darkPallete : solarizedLightPalette, dark: !theme.dark).start()
             }
         }, theme.dark ? theme.icons.fastSettingsSunny : theme.icons.fastSettingsDark))
         

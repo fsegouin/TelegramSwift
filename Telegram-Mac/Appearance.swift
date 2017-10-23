@@ -759,7 +759,7 @@ private func generateTheme(pallete: ColorPallete, dark: Bool, fontSize: CGFloat)
 
 
 func updateTheme(with settings: ThemePalleteSettings, for window: Window? = nil, animated: Bool = false) {
-    telegramUpdateTheme(generateTheme(pallete: settings.dark ? darkPallete  : whitePallete, dark: settings.dark, fontSize: settings.fontSize), window: window, animated: animated)
+    telegramUpdateTheme(generateTheme(pallete: settings.dark ? darkPallete  : solarizedLightPalette, dark: settings.dark, fontSize: settings.fontSize), window: window, animated: animated)
 }
 
 private let appearanceDisposable = MetaDisposable()
@@ -809,7 +809,7 @@ private func telegramUpdateTheme(_ theme: TelegramPresentationTheme, window: Win
 }
 
 func setDefaultTheme(for window: Window? = nil) {
-    telegramUpdateTheme(generateTheme(pallete: whitePallete, dark: false, fontSize: 13.0), window: window, animated: false)
+    telegramUpdateTheme(generateTheme(pallete: solarizedLightPalette, dark: false, fontSize: 13.0), window: window, animated: false)
 }
 
 

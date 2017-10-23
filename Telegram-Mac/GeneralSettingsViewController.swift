@@ -88,7 +88,7 @@ private enum GeneralSettingsEntry : Comparable, Identifiable {
             return  GeneralInteractedRowItem(initialSize, stableId: stableId, name: tr(.generalSettingsDarkMode), description: tr(.generalSettingsDarkModeDescription), type: .switchable(stateback: { () -> Bool in
                 return enabled
             }), action: {
-                _ = updateThemeSettings(postbox: arguments.account.postbox, pallete: !enabled ? darkPallete : whitePallete, dark: !enabled).start()
+                _ = updateThemeSettings(postbox: arguments.account.postbox, pallete: !enabled ? darkPallete : solarizedLightPalette, dark: !enabled).start()
 
             })
         case let .handleInAppKeys(sectionId: _, enabled: enabled):

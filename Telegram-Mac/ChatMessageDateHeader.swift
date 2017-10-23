@@ -70,7 +70,7 @@ class ChatDateStickItem : TableStickItem {
 
         }
         
-        let attributedString =  NSAttributedString.initialize(string: text, color: theme.colors.grayText, font: NSFont.normal(FontSize.text))
+        let attributedString =  NSAttributedString.initialize(string: text, color: theme.colors.greenUI, font: NSFont.normal(FontSize.text))
         self.layout = TextViewLayout(attributedString, maximumNumberOfLines: 1, truncationType: .end, alignment: .center)
 
         
